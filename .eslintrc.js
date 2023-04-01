@@ -1,8 +1,18 @@
 module.exports = {
-  extends: ["airbnb-base"],
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  overrides: [],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['react'],
   rules: {
-    "linebreak-style": 0,
-    "no-console": "off",
-    "no-plusplus": "off",
+    'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'no-unused-vars': 'off',
   },
 };
