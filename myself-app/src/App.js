@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Effect from './components/Effect';
+import Timer from './components/Timer';
 
 function App() {
   return (
     <div className="App">
-      <Effect />
+      <Timer />
     </div>
   );
 }
