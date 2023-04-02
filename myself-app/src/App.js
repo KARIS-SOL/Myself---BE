@@ -1,25 +1,11 @@
-import { useState } from 'react';
+import React from 'react';
+import './App.css';
+import Effect from './components/Effect';
 
 function App() {
-  const [names, setNames] = useState(['김민수', '홍길동']);
-  const [input, setInput] = useState('');
-
-  const handleInputChange = (e) => {
-    setInput(e.target.value);
-  };
-
-  const handleUpload = () => {
-    setNames((prevState) => {
-      return [input, ...prevState];
-    });
-  };
   return (
-    <div>
-      <input type="text" value={input} onChange={handleInputChange} />
-      <button onClick={handleUpload}> Upload</button>
-      {names.map((name, idx) => {
-        return <p key={idx}>{name}</p>;
-      })}
+    <div className="App">
+      <Effect />
     </div>
   );
 }
